@@ -1,32 +1,31 @@
 class Book {
     private String authorname;
-    
-    static class book_publication{
-        private String title;
-        public void set_book_publication(String bookpublication){
-            this.title=bookpublication;
-        }
-        public String get_book_publication(){
-            return this.title;
-        }
+    public Book(String authorname){
+        this.authorname=authorname;
     }
-    
-    class paper_publication{
-        private String title;
-        public void set_paper_publication(String paperpublication){
-            this.title=paperpublication;
-        }
-        public String get_paper_publication(){
-            return this.title;
-        }
+    public void print(){
+        System.out.println("Author name: "+authorname);
     }
-    
-    public void set_authorname(String author){
-        this.authorname=author;
-    }
-    public String get_authorname(){
-        return this.authorname;
-    }
-
 }
-
+class book_publication extends Book{
+    private String title;
+    public book_publication(String authorname, String title){
+        super(authorname);
+        this.title=title;
+    }
+    public void print(){
+        super.print();
+        System.out.println("Book publication title: "+title);
+    }
+}
+class paper_publication extends Book{
+    private String title;
+    public paper_publication(String authorname, String title){
+        super(authorname);
+        this.title=title;
+    }
+    public void print(){
+        super.print();
+        System.out.println("Paper publication title: "+title);
+    }
+}
