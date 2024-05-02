@@ -1,38 +1,33 @@
 abstract class Vegetable {
     String color;
-    public abstract String getName();
-    public Vegetable(String color){
-        this.color=color;
-    }
-    public String toString(){
-        return getName()+": Color-> "+color;
-    }
+    String name;
+    abstract public String toString();
 }
 class Potato extends Vegetable{
-    String color="Brown";
     public Potato(){
-        super("Brown");
+        super.name="Potato";
+        super.color="Brown";
     }
-    public String getName(){
-        return "Potato";
+    public String toString(){
+        return super.name+": Color-> "+super.color;
     }
 }
 class Brinjal extends Vegetable{
-    String color="Purple";
     public Brinjal(){
-        super("Purple");
+        super.name="Brinjal";
+        super.color="Purple";
     }
-    public String getName(){
-        return "Brinjal";
+    public String toString(){
+        return super.name+": Color-> "+super.color;
     }
 }
 class Tomato extends Vegetable{
-    String color="Red";
     public Tomato(){
-        super("Red");
+        super.name="Tomato";
+        super.color="Red";
     }
-    public String getName(){
-        return "Tomato";
+    public String toString(){
+        return super.name+": Color-> "+super.color;
     }
 }
 
@@ -40,10 +35,10 @@ public class VegetableDemo{
     public static void main(String[] args) {
         System.out.println("Colors of Vegetables");
         Potato p=new Potato();
-        System.out.println(p.toString());
+        System.out.println(p);
         Brinjal b=new Brinjal();
-        System.out.println(b.toString());
+        System.out.println(b);
         Tomato t=new Tomato();
-        System.out.println(t.toString());
+        System.out.println(t);
     }
 }
