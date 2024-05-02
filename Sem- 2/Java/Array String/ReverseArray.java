@@ -2,7 +2,7 @@ import java.util.Scanner;
 public class ReverseArray {
     public static void main(String[] args) {
         Scanner sc=new Scanner(System.in);
-        System.out.println("Array and Average of its Elements");
+        System.out.println("Array in Reverse Order");
         System.out.print("Enter no. of elements in array: ");
         int n=sc.nextInt();
         int[] arr=new int[n];
