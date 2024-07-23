@@ -37,6 +37,11 @@ class Doubly{
 		System.out.println("Inserted Successfully");
 	}
 	public void insertOrder(int data){
+		Node temp=first;
+		if(temp==null){
+			insertFirst(data);
+			return;
+		}
 		Node newNode=new Node(data);
 		if(newNode.data<=first.data){
 			insertFirst(data);
@@ -46,7 +51,6 @@ class Doubly{
 			insertLast(data);
 			return;
 		}
-		Node temp=first;
 		while(temp.rptr!=null && temp.rptr.data<=data){
 			temp=temp.rptr;
 		}
@@ -56,31 +60,40 @@ class Doubly{
 		newNode.lptr=temp;
 		System.out.println("Inserted Successfully");
 	}
-	public void delete(int data){
+	public boolean delete(int data){
+		Node temp=first;
+		if(temp==null){
+			System.out.println("Empty List");
+			return false;
+		}
 		if(first.data==data){
+			if(first.rptr==null){
+				first=null;
+				System.out.println("Deleted Successfully");
+				return true;
+			}
 			(first.rptr).lptr=null;
 			first=first.rptr;
 			System.out.println("Deleted Successfully");
-			return;
+			return true;
 		}
 		if(last.data==data){
 			(last.lptr).rptr=null;
 			last=last.lptr;
 			System.out.println("Deleted Successfully");
-			return;
+			return true;
 		}
-		Node temp=first;
 		while(temp.rptr!=null){
 			if(temp.data==data){
 				(temp.lptr).rptr=temp.rptr;
 				(temp.rptr).lptr=temp.lptr;
 				System.out.println("Deleted Successfully");
-				return;
+				return true;
 			}
 			temp=temp.rptr;
 		}
 		System.out.println("Data Not Found");
-		return;
+		return true;
 	}
 	public void display(){
 		Node temp=first;
@@ -153,7 +166,9 @@ public class MenuDriven{
 					if(a==-1){
 						break;
 					}
-					n.delete(a);
+					if(n.delete(a)==false){
+						break;
+					}
 				}while(a!=-1);
 			}
 			if(num==5){
