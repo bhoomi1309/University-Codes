@@ -37,12 +37,20 @@ class Circular{
 		System.out.println("Inserted Successfully");
 	}
 	public void insertOrder(int data){
+		Node temp=first;
+		if(temp==null){
+			insertFirst(data);
+			return;
+		}
 		Node newNode=new Node(data);
 		if(newNode.data<=first.data){
 			insertFirst(data);
 			return;
 		}
-		Node temp=first;
+		if(newNode.data>=last.data){
+			insertLast(data);
+			return;
+		}
 		while(temp.link!=first && temp.link.data<=data){
 			temp=temp.link;
 		}
@@ -50,24 +58,44 @@ class Circular{
 		temp.link=newNode;
 		System.out.println("Inserted Successfully");
 	}
-	public void delete(int data){
+	public boolean delete(int data){
 		Node temp=first;
+		if(temp==null){
+			System.out.println("Empty List");
+			return false;
+		}
+		if(first.link==last && first.data==data){
+			first=last;
+			System.out.println("Deleted Successfully");
+			return true;
+		}
+		if(first.link==last && last.data==data){
+			last=first;
+			System.out.println("Deleted Successfully");
+			return true;
+		}
+		if(first==last){
+			first=null;
+			last=null;
+			System.out.println("Deleted Successfully");
+			return true;
+		}
 		if(first.data==data){
 			last.link=first.link;
 			first=first.link;
 			System.out.println("Deleted Successfully");
-			return;
+			return true;
 		}
 		while(temp.link!=first){
 			if(temp.link.data==data){
 				temp.link=(temp.link).link;
 				System.out.println("Deleted Successfully");
-				return;
+				return true;
 			}
 			temp=temp.link;
 		}
 		System.out.println("Data Not Found");
-		return;
+		return true;
 	}
 	public void display(){
 		Node temp=first;
@@ -140,7 +168,9 @@ public class MenuDriven{
 					if(a==-1){
 						break;
 					}
-					n.delete(a);
+					if(n.delete(a)==false){
+						break;
+					}
 				}while(a!=-1);
 			}
 			if(num==5){
