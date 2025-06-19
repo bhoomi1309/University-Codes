@@ -1,0 +1,14 @@
+C:\Users\jagdi\Desktop\.NET\Lab_02\obj\Debug\net8.0\Lab_02.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\jagdi\Desktop\.NET\Lab_02\obj\Debug\net8.0\Lab_02.AssemblyInfoInputs.cache
+C:\Users\jagdi\Desktop\.NET\Lab_02\obj\Debug\net8.0\Lab_02.AssemblyInfo.cs
+C:\Users\jagdi\Desktop\.NET\Lab_02\obj\Debug\net8.0\Lab_02.csproj.CoreCompileInputs.cache
+C:\Users\jagdi\Desktop\.NET\Lab_02\bin\Debug\net8.0\Lab_02.exe
+C:\Users\jagdi\Desktop\.NET\Lab_02\bin\Debug\net8.0\Lab_02.deps.json
+C:\Users\jagdi\Desktop\.NET\Lab_02\bin\Debug\net8.0\Lab_02.runtimeconfig.json
+C:\Users\jagdi\Desktop\.NET\Lab_02\bin\Debug\net8.0\Lab_02.dll
+C:\Users\jagdi\Desktop\.NET\Lab_02\bin\Debug\net8.0\Lab_02.pdb
+C:\Users\jagdi\Desktop\.NET\Lab_02\obj\Debug\net8.0\Lab_02.dll
+C:\Users\jagdi\Desktop\.NET\Lab_02\obj\Debug\net8.0\refint\Lab_02.dll
+C:\Users\jagdi\Desktop\.NET\Lab_02\obj\Debug\net8.0\Lab_02.pdb
+C:\Users\jagdi\Desktop\.NET\Lab_02\obj\Debug\net8.0\Lab_02.genruntimeconfig.cache
+C:\Users\jagdi\Desktop\.NET\Lab_02\obj\Debug\net8.0\ref\Lab_02.dll
