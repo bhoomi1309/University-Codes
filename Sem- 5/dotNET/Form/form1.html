@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-4Q6Gf2aSP4eDXB8Miphtr37CMZZQ5oXLH2yaXMJ2w8e2ZtHTl7GptT4jmndRuHDT" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-j1CDi7MgGQ12Z7Qab0qlWQ/Qqz24Gc6BM0thvEMVjHnfYGF0rmFCozFSxQBxwHKO"
+        crossorigin="anonymous"></script>
+    <title>Form</title>
+</head>
+
+<body>
+    <div class="container-fluid border border-5 border-danger-subtle px-5 py-2 bg-info-subtle">
+        <div class="row">
+            <div class="text-center fs-2 my-3 fw-bold">Student Registration Form</div>
+        </div>
+        <hr />
+        <div class="row">
+            <form>
+                <div class="mb-3">
+                    <label for="firstName" class="form-label">First Name</label>
+                    <input type="text" class="form-control" id="firstName" placeholder="First Name">
+                </div>
+                <div class="mb-3">
+                    <label for="middleName" class="form-label">Middle Name</label>
+                    <input type="text" class="form-control" id="middleName" placeholder="Middle Name">
+                </div>
+                <div class="mb-3">
+                    <label for="lastName" class="form-label">Last Name</label>
+                    <input type="text" class="form-control" id="lastName" placeholder="Last Name">
+                </div>
+                <div class="mb-3">
+                    <div class="row">
+                        <div class="col mt-1">
+                            <label for="course" class="form-label">Course</label>
+                        </div>
+                        <div class="col-11">
+                            <select class="form-select w-25" aria-label="course">
+                                <option selected>Course</option>
+                                <option value="1">BTech</option>
+                                <option value="2">Diploma</option>
+                                <option value="3">BBA</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <div class="mb-3">
+                    <div class="mb-1">Gender</div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1"
+                            value="option1" checked>
+                        <label class="form-check-label" for="inlineRadio1">Male</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2"
+                            value="option2">
+                        <label class="form-check-label" for="inlineRadio2">Female</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio3"
+                            value="option3">
+                        <label class="form-check-label" for="inlineRadio3">Other</label>
+                    </div>
+                </div>
+                <div class="mb-3">
+                    <label for="phone" class="form-label">Phone</label>
+                    <select class="form-select" aria-label="Default select example">
+                        <option selected>+91</option>
+                        <option value="1">+92</option>
+                        <option value="2">+93</option>
+                        <option value="3">+94</option>
+                    </select>
+                    <input type="number" class="form-control mt-2" id="phone">
+                </div>
+                <div class="mb-3">
+                    <label for="address" class="form-label">Current Address</label>
+                    <textarea class="form-control" id="address" rows="3"></textarea>
+                </div>
+                <div class="mb-3">
+                    <label for="email" class="form-label">Email address</label>
+                    <input type="email" class="form-control" id="email" placeholder="Email Address">
+                </div>
+                <div class="mb-3">
+                    <label for="password" class="form-label">Password</label>
+                    <input type="password" class="form-control" id="password" placeholder="Enter Password">
+                </div>
+                <div class="mb-3">
+                    <label for="passwordAgain" class="form-label">Re-type Password</label>
+                    <input type="passwordAgain" class="form-control" id="password" placeholder="Re-type Password">
+                </div>
+                <div class="my-5">
+                    <button type="submit" class="btn btn-success w-100">Register</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+
+</html>
